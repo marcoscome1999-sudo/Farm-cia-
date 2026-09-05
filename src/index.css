@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Print styling for receipts */
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    #thermal-receipt-print-area, #thermal-receipt-print-area * {
+      visibility: visible;
+    }
+    #thermal-receipt-print-area {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
