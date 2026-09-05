@@ -82,6 +82,24 @@
   ],
   "produtos": [
     {
+      "id": "prod_1788599737224",
+      "codigo_barras": "5600000000000",
+      "codigo_interno": "MED-013",
+      "nome": "Produto Teste",
+      "principio_ativo": "Substância Teste",
+      "categoria": "Analgésico e Antipirético",
+      "laboratorio": "Laboratório Teste",
+      "forma_farmaceutica": "Comprimido",
+      "dosagem": "",
+      "requer_receita": false,
+      "eh_controlado": false,
+      "preco_custo": 10,
+      "preco_venda": 15,
+      "stock_minimo": 15,
+      "localizacao_prateleira": "",
+      "ativo": true
+    },
+    {
       "id": "prod_01",
       "codigo_barras": "5601234567890",
       "codigo_interno": "MED-001",
@@ -783,6 +801,15 @@
     }
   ],
   "auditoria_logs": [
+    {
+      "id": "aud_1788599737225_eijz",
+      "utilizador_id": "usr_admin_01",
+      "utilizador_nome": "Dr. Afonso Muchanga",
+      "acao": "CRIAR_PRODUTO",
+      "modulo": "CATALOGO",
+      "detalhes": "Cadastrou o produto Produto Teste (P. Venda: 15, Controlado: Não).",
+      "data": "2026-09-05T09:15:37.225Z"
+    },
     {
       "id": "aud_1788599227759_cg3c",
       "utilizador_id": "usr_admin_01",
