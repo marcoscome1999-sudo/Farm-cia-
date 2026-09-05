@@ -82,6 +82,24 @@
   ],
   "produtos": [
     {
+      "id": "prod_1788599737224",
+      "codigo_barras": "5600000000000",
+      "codigo_interno": "MED-013",
+      "nome": "Produto Teste",
+      "principio_ativo": "Substância Teste",
+      "categoria": "Analgésico e Antipirético",
+      "laboratorio": "Laboratório Teste",
+      "forma_farmaceutica": "Comprimido",
+      "dosagem": "",
+      "requer_receita": false,
+      "eh_controlado": false,
+      "preco_custo": 10,
+      "preco_venda": 15,
+      "stock_minimo": 15,
+      "localizacao_prateleira": "",
+      "ativo": true
+    },
+    {
       "id": "prod_01",
       "codigo_barras": "5601234567890",
       "codigo_interno": "MED-001",
@@ -306,7 +324,7 @@
       "data_fabricacao": "2024-01-10",
       "data_validade": "2026-09-27",
       "quantidade_inicial": 100,
-      "quantidade_atual": 14,
+      "quantidade_atual": 13,
       "preco_custo_lote": 45,
       "fornecedor_id": "sup_01"
     },
@@ -455,6 +473,40 @@
     }
   ],
   "vendas": [
+    {
+      "forma_pagamento": "DINHEIRO",
+      "valor_pago": 95,
+      "troco": 0,
+      "desconto_valor": 0,
+      "desconto_percentual": 0,
+      "imposto_iva": 0,
+      "total_liquido": 95,
+      "cliente_nome": "Consumidor Final",
+      "caixa_utilizador_id": "usr_admin_01",
+      "caixa_nome": "Dr. Afonso Muchanga",
+      "subtotal": 95,
+      "itens": [
+        {
+          "produto_id": "prod_01",
+          "produto_nome": "Paracetamol 500mg",
+          "principio_ativo": "Paracetamol",
+          "lote_id": "lot_01",
+          "numero_lote": "L-PARA-2401",
+          "quantidade": 1,
+          "preco_unitario": 95,
+          "preco_custo_unitario": 45,
+          "desconto_item": 0,
+          "subtotal_item": 95,
+          "id": "sitem_1788599227759_x7ph",
+          "venda_id": "sal_1788599227759",
+          "data_validade": "2026-09-27"
+        }
+      ],
+      "id": "sal_1788599227759",
+      "numero_fatura": "FT-2026/0004",
+      "estado": "CONCLUIDA",
+      "data_venda": "2026-09-05T09:07:07.759Z"
+    },
     {
       "id": "sal_01",
       "numero_fatura": "FT-2026/001",
@@ -684,6 +736,22 @@
   ],
   "movimentos_stock": [
     {
+      "id": "mov_1788599227759_j2r6",
+      "produto_id": "prod_01",
+      "produto_nome": "Paracetamol 500mg",
+      "lote_id": "lot_01",
+      "numero_lote": "L-PARA-2401",
+      "utilizador_id": "usr_admin_01",
+      "utilizador_nome": "Dr. Afonso Muchanga",
+      "tipo_movimento": "SAIDA_VENDA",
+      "quantidade": 1,
+      "stock_anterior": 14,
+      "stock_resultante": 13,
+      "referencia_documento": "FT-2026/0004",
+      "motivo": "Venda ao balcão - Fatura FT-2026/0004",
+      "data_movimento": "2026-09-05T09:07:07.759Z"
+    },
+    {
       "id": "mov_01",
       "produto_id": "prod_01",
       "produto_nome": "Paracetamol 500mg",
@@ -733,6 +801,24 @@
     }
   ],
   "auditoria_logs": [
+    {
+      "id": "aud_1788599737225_eijz",
+      "utilizador_id": "usr_admin_01",
+      "utilizador_nome": "Dr. Afonso Muchanga",
+      "acao": "CRIAR_PRODUTO",
+      "modulo": "CATALOGO",
+      "detalhes": "Cadastrou o produto Produto Teste (P. Venda: 15, Controlado: Não).",
+      "data": "2026-09-05T09:15:37.225Z"
+    },
+    {
+      "id": "aud_1788599227759_cg3c",
+      "utilizador_id": "usr_admin_01",
+      "utilizador_nome": "Dr. Afonso Muchanga",
+      "acao": "VENDA_CONCLUIDA",
+      "modulo": "PDV",
+      "detalhes": "Fatura FT-2026/0004 no valor de 95.00 MT (DINHEIRO).",
+      "data": "2026-09-05T09:07:07.759Z"
+    },
     {
       "id": "aud_01",
       "utilizador_id": "usr_admin_01",
