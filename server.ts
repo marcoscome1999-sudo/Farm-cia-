@@ -5,7 +5,7 @@ import { createServer as createViteServer } from 'vite';
 import { db } from './server/db.ts';
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
@@ -775,8 +775,12 @@ app.get('/api/schema.sql', (req, res) => {
 // ==========================================
 async function startServer() {
   if (process.env.NODE_ENV !== 'production') {
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
+const vite = await createViteServer({
+    server: {
+      middlewareMode: true,
+      // The preview host provides the HMR WebSocket; do not open a second fixed port.
+      hmr: false,
+    },
       appType: 'spa',
     });
     app.use(vite.middlewares);
