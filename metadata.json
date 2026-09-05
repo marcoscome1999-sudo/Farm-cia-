@@ -1,0 +1,10 @@
+{
+  "name": "FarmaSys - Gestão de Farmácia e PDV",
+  "description": "Sistema completo de gestão farmacêutica focado em Ponto de Venda (PDV), controlo de lotes e validades, gestão de stock, receitas controladas, fornecedores e relatórios.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
