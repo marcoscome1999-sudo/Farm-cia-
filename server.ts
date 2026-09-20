@@ -797,4 +797,8 @@ const vite = await createViteServer({
   });
 }
 
-startServer();
+export { app };
+
+if (!process.env.VERCEL) {
+  startServer();
+}
