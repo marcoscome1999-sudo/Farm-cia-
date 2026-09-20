@@ -47,22 +47,10 @@ export default function App() {
   const [isSwitchUserOpen, setIsSwitchUserOpen] = useState<boolean>(false);
 
   // Estado Offline
-  const [offlineCount, setOfflineCount] = useState<number>(() => {
-    try {
-      const q = localStorage.getItem('farmasys_offline_sales');
-      return q ? JSON.parse(q).length : 0;
-    } catch {
-      return 0;
-    }
-  });
+  const [offlineCount, setOfflineCount] = useState<number>(() => api.getOfflineQueue().length);
 
   const checkOfflineCount = useCallback(() => {
-    try {
-      const q = localStorage.getItem('farmasys_offline_sales');
-      setOfflineCount(q ? JSON.parse(q).length : 0);
-    } catch {
-      setOfflineCount(0);
-    }
+    setOfflineCount(api.getOfflineQueue().length);
   }, []);
 
   // Carregamento de todos os dados do sistema
