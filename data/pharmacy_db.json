@@ -82,6 +82,24 @@
   ],
   "produtos": [
     {
+      "id": "prod_1789903574127",
+      "codigo_barras": "5035623575283",
+      "codigo_interno": "MED-014",
+      "nome": "Teste Vercel",
+      "principio_ativo": "Teste",
+      "categoria": "Analgésico",
+      "laboratorio": "Genérico",
+      "forma_farmaceutica": "Comprimido",
+      "dosagem": "",
+      "requer_receita": false,
+      "eh_controlado": false,
+      "preco_custo": 0,
+      "preco_venda": 0,
+      "stock_minimo": 10,
+      "localizacao_prateleira": "",
+      "ativo": true
+    },
+    {
       "id": "prod_1788599737224",
       "codigo_barras": "5600000000000",
       "codigo_interno": "MED-013",
@@ -801,6 +819,15 @@
     }
   ],
   "auditoria_logs": [
+    {
+      "id": "aud_1789903574127_38mc",
+      "utilizador_id": "system",
+      "utilizador_nome": "Admin",
+      "acao": "CRIAR_PRODUTO",
+      "modulo": "CATALOGO",
+      "detalhes": "Cadastrou o produto Teste Vercel (P. Venda: 0, Controlado: Não).",
+      "data": "2026-09-20T11:26:14.127Z"
+    },
     {
       "id": "aud_1788599737225_eijz",
       "utilizador_id": "usr_admin_01",
